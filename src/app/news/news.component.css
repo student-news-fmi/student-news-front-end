@@ -1,0 +1,12 @@
+.news {
+    width: 80%;
+    height: 200px;
+    margin: 5px;
+    background-color: white;  
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.news-header {
+    color: darkgrey;
+}
