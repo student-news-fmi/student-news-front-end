@@ -2,7 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 #### Prerequsites
-Ensure you have [angular cli](https://cli.angular.io/) installed (you most probably need `npm`)
+Ensure you have:
+- npm and node.js (https://nodejs.org/en/)
+- [angular cli](https://cli.angular.io/)
+- also run `npm install --save-dev @angular-devkit/build-angular`
 
 ## Development server
 
