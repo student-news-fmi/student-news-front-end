@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { News } from '../news';
 import { NewsService } from './news.service';
 
@@ -8,41 +8,23 @@ import { NewsService } from './news.service';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-  newsList: News[] ;
-  //  [
-  //   {
-  //     id: 0,
-  //     title: 'title1',
-  //     author: 'author1',
-  //     creationDate: new Date(),
-  //     paragraphs: [
-  //       'paragraph1', 'paragraph2', 'paragraph3'
-  //     ]
-  //   },
-  //   {
-  //     id: 1,
-  //     title: 'title2',
-  //     author: 'author2',
-  //     creationDate: new Date(),
-  //     paragraphs: [
-  //       'paragraph1', 'paragraph2', 'paragraph3'
-  //     ]
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'title3',
-  //     author: 'author3',
-  //     creationDate: new Date(),
-  //     paragraphs: [
-  //       'paragraph1', 'paragraph2', 'paragraph3'
-  //     ]
-  //   }
-  // ];
+  newsList: News[];
+  authors: string[];
+  selectedAuthor: string;
+  sortCriteria: string;
+  selectedOrder: string;
 
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService) { 
+    this.selectedAuthor = 'All';
+    this.sortCriteria = 'Date';
+    this.selectedOrder = 'Ascending';
+  }
 
   ngOnInit() {
     this.newsService.getNews()
-       .subscribe(news => this.newsList = news);
+       .subscribe(news => {
+         this.newsList = news;
+         this.authors = Array.from(new Set(news.map((item: any) => item.author)));
+       });
   }
 }

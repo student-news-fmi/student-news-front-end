@@ -1,4 +1,30 @@
-<div class="news" *ngFor="let news of newsList">
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <label>Filter by author:</label>
+      <br>
+      <select [(ngModel)]="selectedAuthor" class="custom-select">
+        <option selected>All</option>
+        <option *ngFor="let author of authors">{{author}}</option>
+      </select>
+    </div>
+    <div class="col">
+      <label>Sort by:</label>
+      <br>
+      <select [(ngModel)]="sortCriteria" class="custom-select sort">
+        <option selected>Date</option>
+        <option>Author</option>
+      </select>
+      <select [(ngModel)]="selectedOrder" class="custom-select sort">
+        <option selected>Ascending</option>
+        <option>Descending</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="news" *ngFor="let news of newsList | filterByAuthor:selectedAuthor | sort:sortCriteria:selectedOrder">
   <div class="head">
   <h2>{{ news.title }}</h2>
   <div class="news-header">

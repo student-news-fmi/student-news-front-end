@@ -7,7 +7,7 @@ import { News } from '../news';
   providedIn: 'root'
 })
 export class NewsService {
-  private newsUrl: string = 'http://localhost:8090/news'; 
+  private newsUrl: string = 'http://localhost:8081/news'; 
 
   constructor(private http: HttpClient) {}
 
