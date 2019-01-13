@@ -1,13 +1,32 @@
 .news {
-    width: 80%;
-    height: 200px;
+    width: 75%;
     margin: 5px auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: white;  
-    border: 1px solid grey;
-    border-radius: 10px;
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
 }
 
 .news-header {
-    color: darkgrey;
+    margin-left: 10px;
+}
+
+.date, .author {
+    color: darkblue;
+}
+
+.news-body {
+    margin-left: 10px;
+}
+
+.head {
+    height: 90px;
+    margin-bottom: 30px;
+    padding: 8px;
+    background-color: cornflowerblue;
+}
+
+h2 {
+    margin-left: 20px;
+    color: white;
 }

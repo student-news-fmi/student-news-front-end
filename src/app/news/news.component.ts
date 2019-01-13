@@ -8,8 +8,8 @@ import { NewsService } from './news.service';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-  newsList: News[];
-  // [
+  newsList: News[] ;
+  //  [
   //   {
   //     id: 0,
   //     title: 'title1',
@@ -37,13 +37,12 @@ export class NewsComponent implements OnInit {
   //       'paragraph1', 'paragraph2', 'paragraph3'
   //     ]
   //   }
-  // ]
+  // ];
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.newsService.getNews()
-      .subscribe(news => this.newsList = news);
+       .subscribe(news => this.newsList = news);
   }
-
 }

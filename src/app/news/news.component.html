@@ -1,11 +1,16 @@
 <div class="news" *ngFor="let news of newsList">
+  <div class="head">
   <h2>{{ news.title }}</h2>
   <div class="news-header">
-    <p>Created on: {{ news.creationDate}} by {{ news.author }}</p>
+    <p>
+      Created on: <span class="date">{{ news.creationDate | date: 'MMM d, y H:m' }}</span> by
+      <span class="author">{{ news.author }}</span>
+    </p>
+  </div>
   </div>
   <div class="news-body">
     <p *ngFor="let paragraph of news.paragraphs">
       {{ paragraph }}
     </p>
   </div>
-</div>  
+</div>

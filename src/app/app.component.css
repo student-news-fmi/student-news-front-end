@@ -1,5 +1,12 @@
-#main {
-    margin: 0 auto;
-    margin-top: 5%;
-    width: 90%;
+h1.title { 
+    padding: 50px;
+    font-weight: 500;
+    font-size: 3.5rem;
+    color: white
+}
+
+.title-header {
+    height: 180px;
+    background-color: cornflowerblue; 
+    margin-bottom: 50px;
 }
