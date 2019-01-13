@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
-import { News } from '../news';
+import { News } from './news';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +13,8 @@ export class NewsService {
 
   getNews(): Observable<News[]> {
     return this.http.get<News[]>(this.newsUrl);
+  }
+  getNewsDetails(id: number): Observable<News> {
+    return this.http.get<News>(this.newsUrl + '/' + id);
   }
 }

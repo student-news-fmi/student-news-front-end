@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
 import { FilterByAuthorPipe } from './filter-by-author.pipe';
 import { SortPipe } from './sort.pipe';
+import { NewsDetailsComponent } from './news-details/news-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
     FilterByAuthorPipe,
-    SortPipe
+    SortPipe,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,
