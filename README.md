@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Ensure you have:
 - npm and node.js (https://nodejs.org/en/)
 - [angular cli](https://cli.angular.io/)
-- also run `npm install --save-dev @angular-devkit/build-angular`
+- in project dir run `npm install`
 
 ## Development server
 
